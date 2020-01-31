@@ -15,14 +15,13 @@ class MovieFragment : Fragment() {
     private lateinit var movieViewModel: MovieViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         movieViewModel =
             ViewModelProviders.of(this).get(MovieViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_movie, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
+//        val textView: TextView = root.findViewById(R.id.text_home)
         movieViewModel.text.observe(this, Observer {
             textView.text = it
         })

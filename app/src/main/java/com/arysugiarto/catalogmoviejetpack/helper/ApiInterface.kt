@@ -3,7 +3,6 @@ package com.arysugiarto.catalogmoviejetpack.helper
 import com.arysugiarto.catalogmoviejetpack.model.repo.remote.ItemResponse
 import com.arysugiarto.catalogmoviejetpack.model.repo.remote.ListItem
 import com.arysugiarto.catalogmoviejetpack.model.repo.remote.ListTv
-import com.arysugiarto.catalogmoviejetpack.model.repo.remote.TvResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -16,7 +15,7 @@ interface ApiInterface {
     @GET("movie/{movie_id}")
     fun getMovieDetails(@Path("movie_id") movieId: String?,
                         @Query("api_key") apiKey: String?
-    ) : Call<ListItem<Any?>>
+    ) : Call<ListItem>
 
     @GET("tv/popular")
     fun getTvShows(@Query("api_key") apiKey: String?) : Call<ItemResponse>
