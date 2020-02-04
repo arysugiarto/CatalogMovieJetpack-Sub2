@@ -9,11 +9,12 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.arysugiarto.catalogmoviejetpack.R
-import com.arysugiarto.catalogmoviejetpack.ui.movie.MovieViewModel
-import com.arysugiarto.catalogmoviejetpack.ui.tvshow.TvShowViewModel
+import com.arysugiarto.catalogmoviejetpack.model.repo.remote.ListItem
+import com.arysugiarto.catalogmoviejetpack.model.repo.remote.ListTv
 import com.arysugiarto.catalogmoviejetpack.viewmodel.ViewModelFactory
 import com.arysugiarto.catalogmoviejetpack.viewmodel.ViewModelMovies
 import com.arysugiarto.catalogmoviejetpack.viewmodel.ViewModelTv
+import kotlinx.android.synthetic.main.fragment_desc.*
 
 
 /**
@@ -55,12 +56,12 @@ class DescFragment : Fragment() {
 
     }
 
-    private fun loadDataMovie(movie : ItemList?){
-        tv_description.text = movie?.overview
+    private fun loadDataMovie(movie : ListItem?){
+        tv_desc.text = movie?.overview
     }
 
-    private fun loadDataTvShow(tvShow: TvShowsDetail?){
-        tv_description.text = tvShow?.overview
+    private fun loadDataTvShow(tvShow: ListTv?){
+        tv_desc.text = tvShow?.overview
     }
 
 

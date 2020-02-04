@@ -9,6 +9,4 @@ interface DataSource {
     fun getMovieDetail(movieId : String) : LiveData<ListItem>
     fun getTvShowsList(): LiveData<List<ListItem>>
     fun getTvShowsDetail(tvId:String) : LiveData<ListTv>
-    fun getMovieCrew(movieId: String): LiveData<List<ListCrew>>
-    fun getTvShowsCrew(tvId: String): LiveData<List<ListCrew>>
 }

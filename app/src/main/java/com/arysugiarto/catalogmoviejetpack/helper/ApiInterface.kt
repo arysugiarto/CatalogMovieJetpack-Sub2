@@ -26,11 +26,4 @@ interface ApiInterface {
                          @Query("api_key") apiKey: String?
     ) : Call<ListTv>
 
-    @GET("movie/{movie_id}/credits")
-    fun getMovieCrew(@Path("movie_id") movieId: String?,
-                     @Query("api_key") apiKey: String?) : Call<TvResponse>
-
-    @GET("tv/{tv_id}/credits")
-    fun getTvShowCrew(@Path("tv_id") tvId: String?,
-                      @Query("api_key") apiKey: String?) : Call<TvResponse>
 }
