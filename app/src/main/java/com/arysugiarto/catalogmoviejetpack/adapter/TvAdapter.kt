@@ -11,8 +11,6 @@ import com.arysugiarto.catalogmoviejetpack.R
 import com.arysugiarto.catalogmoviejetpack.model.repo.remote.ListItem
 import com.arysugiarto.catalogmoviejetpack.ui.DetailActivity
 import com.bumptech.glide.Glide
-import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_detail.view.*
 import kotlinx.android.synthetic.main.activity_detail.view.tv_title
 import kotlinx.android.synthetic.main.item_list.view.*
 

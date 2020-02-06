@@ -27,7 +27,7 @@ android {
         }
 
         debug {
-            buildConfigField "String", "MOVIE_API", '"12ed4f73aa9ef0ae4a134d633a6c01af"'
+            buildConfigField "String", "MOVIE_API", '"12773a9e9b85b21cddb723222c0b145a"'
             buildConfigField "String", "BASE_URL", '"https://api.themoviedb.org/3/"'
             buildConfigField "String", "IMG_URL", '"https://image.tmdb.org/t/p/"'
         }

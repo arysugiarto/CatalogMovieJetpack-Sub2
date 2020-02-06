@@ -44,7 +44,7 @@ class MovieFragment : Fragment() {
         })
 
         rv_movies.apply {
-            layoutManager = GridLayoutManager(context, 2)
+            layoutManager = GridLayoutManager(context, 3)
             adapter = movieAdapter
         }
 

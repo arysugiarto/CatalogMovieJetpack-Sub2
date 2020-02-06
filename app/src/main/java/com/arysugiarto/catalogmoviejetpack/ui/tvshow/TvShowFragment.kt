@@ -44,7 +44,7 @@ class TvShowFragment : Fragment() {
             tvShowsAdapter.addList(tvShowList)
         })
         rv_tv.apply {
-            layoutManager = GridLayoutManager(context, 2)
+            layoutManager = GridLayoutManager(context, 3)
             adapter = tvShowsAdapter
         }
     }
