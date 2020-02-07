@@ -31,7 +31,6 @@ class MovieAdapter (private val context: Context?): RecyclerView.Adapter<MovieAd
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindViewHolder(movieList[position])
         context?.let { Glide.with(it).load("${BuildConfig.IMG_URL}w500${movieList[position].posterPath}").into(holder.poster) }
         holder.cardItem.setOnClickListener {
             val intent = Intent(context, DetailActivity::class.java)
@@ -41,10 +40,8 @@ class MovieAdapter (private val context: Context?): RecyclerView.Adapter<MovieAd
     }
 
     class ViewHolder(itemView : View) :RecyclerView.ViewHolder(itemView) {
-        val poster = itemView.image_cover
+        val poster = itemView.poster
         val cardItem = itemView.card_item
-        fun bindViewHolder(listMovies : ListItem){
-            itemView.tv_title.text = listMovies.title
-        }
+
     }
 }

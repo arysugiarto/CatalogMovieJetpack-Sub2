@@ -11,7 +11,6 @@ import com.arysugiarto.catalogmoviejetpack.R
 import com.arysugiarto.catalogmoviejetpack.model.repo.remote.ListItem
 import com.arysugiarto.catalogmoviejetpack.ui.DetailActivity
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.activity_detail.view.tv_title
 import kotlinx.android.synthetic.main.item_list.view.*
 
 
@@ -32,7 +31,6 @@ class TvAdapter(private val context: Context?) : RecyclerView.Adapter<TvAdapter.
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindViewHolder(listTvShows[position])
         context?.let { Glide.with(it).load("${BuildConfig.IMG_URL}w500${listTvShows[position].posterPath}").into(holder.poster) }
         holder.cardItem.setOnClickListener {
             val intent = Intent(context, DetailActivity::class.java)
@@ -42,10 +40,7 @@ class TvAdapter(private val context: Context?) : RecyclerView.Adapter<TvAdapter.
     }
 
     class ViewHolder(itemView : View) :RecyclerView.ViewHolder(itemView) {
-        val poster = itemView.image_cover
+        val poster = itemView.poster
         val cardItem = itemView.card_item
-        fun bindViewHolder(listMovies : ListItem){
-            itemView.tv_title.text = listMovies.name
-        }
     }
 }

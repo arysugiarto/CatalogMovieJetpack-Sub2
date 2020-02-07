@@ -37,7 +37,7 @@ class MovieFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         val movieAdapter = MovieAdapter(context)
-        movieViewModel.movie.observe(viewLifecycleOwner, Observer {
+            movieViewModel.movie.observe(viewLifecycleOwner, Observer {
             progressbar.visibility = View.GONE
             movie= it
             movieAdapter.addList(movie)

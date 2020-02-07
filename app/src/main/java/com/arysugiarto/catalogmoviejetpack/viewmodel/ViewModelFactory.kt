@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.arysugiarto.catalogmoviejetpack.di.Injection
 import com.arysugiarto.catalogmoviejetpack.model.repo.DataRepo
-
+@Suppress("UNCHECKED_CAST")
 class ViewModelFactory(private val dataRepo: DataRepo) : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(factoryClass: Class<T>) :T{
